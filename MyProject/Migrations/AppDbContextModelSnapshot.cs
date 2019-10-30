@@ -18,7 +18,7 @@ namespace MyProject.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("WebApplication1.Models.Category", b =>
+            modelBuilder.Entity("MyProject.Models.Category", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -33,7 +33,7 @@ namespace MyProject.Migrations
                     b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Phone", b =>
+            modelBuilder.Entity("MyProject.Models.Phone", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -64,9 +64,9 @@ namespace MyProject.Migrations
                     b.ToTable("Phone");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Phone", b =>
+            modelBuilder.Entity("MyProject.Models.Phone", b =>
                 {
-                    b.HasOne("WebApplication1.Models.Category", "Category")
+                    b.HasOne("MyProject.Models.Category", "Category")
                         .WithMany("phones")
                         .HasForeignKey("categoryId")
                         .OnDelete(DeleteBehavior.Cascade);
