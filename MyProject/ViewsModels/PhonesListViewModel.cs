@@ -9,7 +9,6 @@ namespace MyProject.ViewsModels
     public class PhonesListViewModel
     {
         public IEnumerable<Phone> allPhones { get; set; }
-        public string curCat { get; set; }
-        
+        public string curCat { get; set; }        
     }
 }

@@ -11,4 +11,5 @@ namespace MyProject.ViewsModels
         public string Password { get; set; }
         public int Year { get; set; }
     }
+
 }

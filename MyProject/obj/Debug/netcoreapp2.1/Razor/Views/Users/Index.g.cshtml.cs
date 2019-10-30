@@ -71,7 +71,7 @@ using MyProject.ViewsModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(97, 48, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d331bcd595904e6cae879e527a721013", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4efb02cc6a5b417dbcd7917e694303e5", async() => {
                 BeginContext(120, 21, true);
                 WriteLiteral("Добавить пользователя");
                 EndContext();
@@ -122,12 +122,12 @@ using MyProject.ViewsModels;
             WriteLiteral("</td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(378, 337, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "473854addb754e82a148cdf81c6ceb3f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7888781e4a944362908b806c8e855f06", async() => {
                 BeginContext(442, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(464, 88, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5449655193284a31a9b9eca940a51282", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a5a3790d3b694604b57168456eca821d", async() => {
                     BeginContext(540, 8, true);
                     WriteLiteral("Изменить");
                     EndContext();

@@ -35,4 +35,3 @@ C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Vie
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Account\Index.g.cshtml.cs
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Users\Index.g.cshtml.cs
-C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Users\Top.g.cshtml.cs

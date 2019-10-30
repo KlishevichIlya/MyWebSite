@@ -1,20 +1,24 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
 using MyProject.Models;
 using MyProject.ViewsModels;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyProject.Controllers
 {
-    public class UsersContoller : Controller
+    public class UsersController : Controller
     {
         UserManager<User> _userManager;
 
-        public UsersContoller(UserManager<User> userManager)
+        public UsersController(UserManager<User> userManager)
         {
             _userManager = userManager;
         }
+
+        public IActionResult Index() => View(_userManager.Users.ToList());
+
+        public IActionResult Create() => View();
 
         [HttpPost]
         public async Task<IActionResult> Create(CreateUserViewModel model)
@@ -38,6 +42,7 @@ namespace MyProject.Controllers
             return View(model);
         }
 
+
         public async Task<IActionResult> Edit(string id)
         {
             User user = await _userManager.FindByIdAsync(id);
@@ -48,6 +53,7 @@ namespace MyProject.Controllers
             EditUserViewModel model = new EditUserViewModel { Id = user.Id, Email = user.Email, Year = user.Year };
             return View(model);
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Edit(EditUserViewModel model)
@@ -89,13 +95,5 @@ namespace MyProject.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Index()
-        {
-            return View(_userManager.Users.ToList());
-        }
-
-        public IActionResult Create() => View();
-
     }
 }
-
