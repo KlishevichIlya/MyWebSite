@@ -1,0 +1,18 @@
+﻿<h1>Информация</h1>
+<h3>@Model.curCat</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (var a in Model.allPhones)
+        {
+            if (a.id == 6003)
+            {
+                <img class="img-thumbnail" src="@a.img" />
+                <h2>@a.namePhone</h2><br />
+                <p>@a.shortDesc</p>
+                <p>@a.fullDesc</p>
+                break;
+            }
+
+        }
+        }
+</div>

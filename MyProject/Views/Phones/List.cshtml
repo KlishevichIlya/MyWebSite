@@ -1,0 +1,17 @@
+﻿    <h1> Телефоны </h1>
+    <h3>@Model.curCat</h3>
+    <div class="row mt-5 mb-2">
+        @{
+            foreach (var a in Model.allPhones)
+            {             
+                
+                <div class="col-lg-4">
+                    <img class="img-thumbnail" src="@a.img"/>
+                    <h2>@a.namePhone</h2>
+                    <p>@a.shortDesc</p>
+                    <p><a class="btn btn-warning" href="/Phones/Information">Читать</a></p>
+                </div>
+            }
+        }
+    </div>
+
