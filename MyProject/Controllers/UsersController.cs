@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.Models;
 using MyProject.ViewsModels;
@@ -15,9 +16,12 @@ namespace MyProject.Controllers
         {
             _userManager = userManager;
         }
-
-        public IActionResult Index() => View(_userManager.Users.ToList());
-
+        
+        public IActionResult Index()
+        {           
+            return View(_userManager.Users.ToList());
+        }
+        
         public IActionResult Create() => View();
 
         [HttpPost]

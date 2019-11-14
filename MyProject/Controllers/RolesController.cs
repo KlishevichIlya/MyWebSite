@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.Models;
 using MyProject.ViewsModels;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace MyProject.Controllers
 {
+
     public class RolesController : Controller
     {
         RoleManager<IdentityRole> _roleManager;
@@ -18,8 +20,14 @@ namespace MyProject.Controllers
             _roleManager = roleManager;
             _userManager = userManager;
         }
-        public IActionResult Index() => View(_roleManager.Roles.ToList());
 
+        [Authorize(Roles ="admin")]
+        public IActionResult Index()
+        {
+            return View(_roleManager.Roles.ToList());
+           
+        }
+        [Authorize(Roles ="admin")]
         public IActionResult Create() => View();
         [HttpPost]
         public async Task<IActionResult> Create(string name)
