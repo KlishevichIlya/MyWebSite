@@ -77,7 +77,7 @@ using Microsoft.Extensions.Localization;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(84, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "217cb8dc9cef4472bfd01964c934a63f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f72aa54142d45f7a23d02a7bff7ca7b", async() => {
                 BeginContext(90, 73, true);
                 WriteLiteral("\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"MyStyleSheet.css\" />\r\n");
                 EndContext();

@@ -129,6 +129,21 @@ namespace MyProject.Migrations.Application
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("MyProject.Models.Comment", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("UserName");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("MyProject.Models.User", b =>
                 {
                     b.Property<string>("Id")

@@ -8,23 +8,26 @@ namespace MyProject.ViewsModels
 {
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "EmailRequired")]
+        [StringLength(50, ErrorMessage = "EmailLenght", MinimumLength = 7)]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
-        [Display(Name = "Год рождения")]
+        [Required(ErrorMessage = "NameRequired")]
+        [Range(1900, 2019, ErrorMessage = "NameRange")]
+        [Display(Name = "Yearb")]
         public int Year { get; set; }
 
-        [Required]        
+        [Required(ErrorMessage = "PasswordRequired")]        
         [DataType(DataType.Password)]
-        [Display(Name = "Пароль")]
+        [StringLength(15, ErrorMessage = "PasswordLenght", MinimumLength = 5)]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Required]
-        [Compare("Password", ErrorMessage = "Пароли не совпадают")]
+        [Required(ErrorMessage = "PasswordConfirmRequired")]        
         [DataType(DataType.Password)]
-        [Display(Name = "Подтвердить пароль")]
+        [StringLength(15, ErrorMessage = "PasswordConfirmLenght", MinimumLength = 5)]
+        [Display(Name = "Confpassword")]
         public string PasswordConfirm { get; set; }
     }
 }

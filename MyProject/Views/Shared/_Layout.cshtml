@@ -9,69 +9,78 @@
     <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/css/MyStyleSheet.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="/Home/Index">@Localizer["P1"]</a>
-            <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarCollapse" aria-label="Toggle navigation" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/Phones/Index">@Localizer["P2"]<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/Partners">@Localizer["P3"]</a>
-                    </li>
-                    @if (!User.Identity.IsAuthenticated)
-                    {
-                        <li class="nav-item active">
-                            <a class="nav-link " href="/Account/Register">@Localizer["P4"]</a>
-                        </li>
-                    }
-                    @if (!User.Identity.IsAuthenticated)
-                    {
-                        <li class="nav-item active">
-                            <a class="nav-link " href="/Account/Login">@Localizer["P5"]</a>
-                        </li>
-                    }
 
-                    @if (User.IsInRole("admin"))
-                    {
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="/Home/Index">@Localizer["P1"]</a>
+                <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarCollapse" aria-label="Toggle navigation" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link " href="/Users/Index">@Localizer["P6"]</a>
+                            <a class="nav-link" href="/Phones/Index">@Localizer["P2"]<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link " href="/Roles/Index">@Localizer["P7"]</a>
+                            <a class="nav-link" href="/Partners">@Localizer["P3"]</a>
                         </li>
-                    }
-
-
-                    @if (User.Identity.IsAuthenticated)
-                    {
                         <li class="nav-item active">
-                            <a class="nav-link " asp-controller="Account" asp-action="Index">@Localizer["P8"]</a>
+                            <a class="nav-link" href="/Home/Privacy">Отзывы</a>
                         </li>
-                    }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item active">
+                                <a class="nav-link " href="/Account/Register">@Localizer["P4"]</a>
+                            </li>
+
+                        }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item active">
+                                <a class="nav-link " href="/Account/Login">@Localizer["P5"]</a>
+                            </li>
+                        }
+
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item active">
+                                <a class="nav-link " href="/Users/Index">@Localizer["P6"]</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link " href="/Roles/Index">@Localizer["P7"]</a>
+                            </li>
+                        }
 
 
 
-                </ul>
-                <form class="form-inline mt-2 mt-md-0">
-                    <font color="white">@await Component.InvokeAsync("Timer")</font>
-                </form>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item active">
+                                <a class="nav-link " asp-controller="Account" asp-action="Index">@Localizer["P8"]</a>
+                            </li>
+                        }
+
+
+
+                    </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <font color="white">@await Component.InvokeAsync("Timer")</font>
+                    </form>
+                </div>
+                <p>
+
+                </p>
+            </nav>
+        </header>
+        <div class="container mt-5">
+            <div container body-content>
+                <div>
+                    @await Html.PartialAsync("_SelectLanguagePartial")
+                </div>
+                @RenderBody()
             </div>
-            <p>
-
-            </p>
-        </nav>
-    </header>
-    <div class="container mt-5">
-        <div>
-            @RenderBody()
         </div>
-    </div>
-    <script src="~/js/bootstrap.min.js"></script>
-</body>
+        <script src="~/js/bootstrap.min.js"></script>
+    </body>
 </html>

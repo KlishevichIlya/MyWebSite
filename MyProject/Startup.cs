@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Builder;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using MyProject.Hubs;
 
 namespace MyProject
 {
@@ -26,18 +28,18 @@ namespace MyProject
         {
             confString = new ConfigurationBuilder().SetBasePath(hostEnv.ContentRootPath).AddJsonFile("dbsettings.json").Build();
             Configuration = configuration;      
-        }        
+        }
 
-        
+
         public void ConfigureServices(IServiceCollection services)
         {
-            
+
             services.AddDbContext<ApplicationContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(confString.GetConnectionString("DefaultConnection")));
-            
+
             services.AddTransient<IAllPhone, PhoneRepository>();
-           
+
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationContext>();
             services.AddTransient<IPhonesCategory, CategoryRepository>();
@@ -51,34 +53,52 @@ namespace MyProject
             services.AddMvc()
                 .AddDataAnnotationsLocalization()
                 .AddViewLocalization();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("en"),
+                    new CultureInfo("de"),
+                    new CultureInfo("ru")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture("ru");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+            services.AddSignalR();
 
         }
 
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
 
-            if (env.IsDevelopment())
+            app.UseSignalR(routes =>
             {
-                app.UseDeveloperExceptionPage();
-            }
-            
+                routes.MapHub<ChatHubs>("/Chat");
+
+            });
+            app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();      
             app.UseAuthentication();
             app.UseDeveloperExceptionPage();
-            var supportedCultures = new[]
-           {
-                new CultureInfo("en"),
-                new CultureInfo("ru"),
-                new CultureInfo("de")
-            };
-            app.UseRequestLocalization(new RequestLocalizationOptions
+            /* var supportedCultures = new[]
             {
-                DefaultRequestCulture = new RequestCulture("ru"),
-                SupportedCultures = supportedCultures,
-                SupportedUICultures = supportedCultures
-            });
+                 new CultureInfo("en"),
+                 new CultureInfo("ru"),
+                 new CultureInfo("de")
+             };
+             app.UseRequestLocalization(new RequestLocalizationOptions
+             {
+                 DefaultRequestCulture = new RequestCulture("en"),
+                 SupportedCultures = supportedCultures,
+                 SupportedUICultures = supportedCultures
+             });*/
+            var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(locOptions.Value);
             app.UseStaticFiles();
+            
 
             app.UseMvc(routes =>
               {
@@ -90,6 +110,7 @@ namespace MyProject
                   routes.MapRoute(
                      name: "default2",
                      template: "{controller=Phones}/{action=Information}/{id?}");
+                  
               });
            
             using (var scope = app.ApplicationServices.CreateScope())

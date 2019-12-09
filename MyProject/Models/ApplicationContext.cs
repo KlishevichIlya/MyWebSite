@@ -14,5 +14,6 @@ namespace MyProject.Models
         {
             Database.EnsureCreated();
         }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

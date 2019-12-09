@@ -51,7 +51,6 @@ C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.dll
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.pdb
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.csproj.CopyComplete
-C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.csprojAssemblyReference.cache
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Contact.de.resources
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Contact.en.resources
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Contact.ru.resources
@@ -67,3 +66,8 @@ C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Components.Timer.de.resources
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Components.Timer.en.resources
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Components.Timer.ru.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.ViewsModels.RegisterViewModel.de.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.ViewsModels.RegisterViewModel.en.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.ViewsModels.RegisterViewModel.ru.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SelectLanguagePartial.g.cshtml.cs
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.csprojAssemblyReference.cache

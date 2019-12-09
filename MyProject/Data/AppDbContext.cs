@@ -17,6 +17,7 @@ namespace MyProject.Data
         public DbSet<Phone> Phone { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<User> User { get; set; }
+        
 
     }
 }
