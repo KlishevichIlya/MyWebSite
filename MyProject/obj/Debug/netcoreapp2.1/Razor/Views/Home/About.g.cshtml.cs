@@ -28,8 +28,18 @@ using MyProject.ViewsModels;
 
 #line default
 #line hidden
+#line 4 "C:\Users\Ilya\source\repos\MyProject\MyProject\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Mvc.Localization;
+
+#line default
+#line hidden
+#line 5 "C:\Users\Ilya\source\repos\MyProject\MyProject\Views\_ViewImports.cshtml"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f5989146c20e297d05361cc87bf290b8b98e9284", @"/Views/Home/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8346a9e56f217a4bd34523a3946ed5f2113b86d6", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4ef5f1ef31367949e2cea7bbc7b6fd608ca466df", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_About : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

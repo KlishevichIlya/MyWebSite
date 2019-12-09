@@ -1,21 +1,31 @@
-﻿<h1>Информация</h1>
-<h3>@Model.curCat</h3>
-<div class="row mt-5 mb-2">
-    @{
-        foreach (var a in Model.allPhones)
-        {
-            if (a.id == 6003)
-            {
-                <img class="img-thumbnail" src="@a.img" />
-                <h2>@a.namePhone</h2><br />
-                <p>@a.shortDesc</p>
-                <p>@a.fullDesc</p>
-                break;
-            }
-        }
-        }
+﻿@model MyProject.Models.Phone
+
+@{
+    ViewData["Title"] = Model.namePhone;
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="MyStyleSheet.css" />
+</head>
+<div style="padding-top:15px">
+    <h1 align="center">@Model.namePhone</h1>
 </div>
 
+<div>
+    <div>
+        <img width="900" height="600" class="image-center" src="@Model.img" />
+    </div>
+    <dl class="dl-horizontal">
+        <dt>Информация</dt>
+        <dd>@Model.fullDesc</dd>
+        <dt>Компания, разработавшая данную модель девайса:</dt>
+        <dd>@Model.companyPhone</dd>
+        <dt>ОЗУ данного девайса:</dt>
+        <dd>@Model.ramPhone</dd>
+        <dt>Процессор:</dt>
+        <dd>@Model.cpuPhone</dd>
+    </dl>
 
+</div>
 
 

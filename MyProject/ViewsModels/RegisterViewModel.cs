@@ -16,7 +16,7 @@ namespace MyProject.ViewsModels
         [Display(Name = "Год рождения")]
         public int Year { get; set; }
 
-        [Required]
+        [Required]        
         [DataType(DataType.Password)]
         [Display(Name = "Пароль")]
         public string Password { get; set; }

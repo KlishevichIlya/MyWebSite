@@ -15,16 +15,23 @@ namespace MyProject.Controllers
     {
         RoleManager<IdentityRole> _roleManager;
         UserManager<User> _userManager;
+        
+
         public RolesController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
+            
         }
 
         [Authorize(Roles ="admin")]
         public IActionResult Index()
         {
-            return View(_roleManager.Roles.ToList());
+            if (User.IsInRole("admin"))
+                return View(_roleManager.Roles.ToList());
+            else
+                return NotFound();
+
            
         }
         [Authorize(Roles ="admin")]
@@ -89,23 +96,20 @@ namespace MyProject.Controllers
         {
             // получаем пользователя
             User user = await _userManager.FindByIdAsync(userId);
+            
             if (user != null)
             {
-                // получем список ролей пользователя
-                var userRoles = await _userManager.GetRolesAsync(user);
-                // получаем все роли
-                var allRoles = _roleManager.Roles.ToList();
-                // получаем список ролей, которые были добавлены
-                var addedRoles = roles.Except(userRoles);
-                // получаем роли, которые были удалены
+                
+                var userRoles = await _userManager.GetRolesAsync(user);             
+                var allRoles = _roleManager.Roles.ToList();                
+                var addedRoles = roles.Except(userRoles);                
                 var removedRoles = userRoles.Except(roles);
-
                 await _userManager.AddToRolesAsync(user, addedRoles);
-
                 await _userManager.RemoveFromRolesAsync(user, removedRoles);
-
+                await _userManager.UpdateAsync(user);               
                 return RedirectToAction("UserList");
             }
+            
 
             return NotFound();
         }

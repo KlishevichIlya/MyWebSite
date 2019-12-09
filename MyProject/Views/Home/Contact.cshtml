@@ -1,38 +1,26 @@
-﻿<!--@{
-    ViewData["Title"] = "Конкурс на MacBook Pro 2019";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
-
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>-->
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer 
 
 <div style="padding:50px">
-    <h1><b>Розыгрыш MacBook Pro 2019 (512 Gb)</b></h1>
-    <h3><span style="color:red">Условия для участия в конкурсе:</span></h3>
+    <h1><b>@Localizer["Mes1"]</b></h1>
+    <h3><span style="color:red">@Localizer["Mes2"]</span></h3>
     <ul>
-        <li><p>Быть подписаным на мою <a href="https://vk.com/ilya_klishevich" target="_blank">страницу ВКонтакте</a></li></p>
-        <li><p>Подписаться на мой <a href="https://github.com/KlishevichIlya" target="_blank">GitHub</a></p></li>     
+        <li><p>@Localizer["Mes3"] <a href="https://vk.com/ilya_klishevich" target="_blank"> @Localizer["Mes4"]</a></li></p>
+        <li><p>@Localizer["Mes5"] <a href="https://github.com/KlishevichIlya" target="_blank">GitHub</a></p></li>
     </ul>
     <p>
         <img src="~/images/mack.jpg" width="950" height="500" />
     </p>
-    <h5>Розыгрыш MacBook Pro 2019 (512 Gb) пройдет в прямом эфире моего <a href="https://www.instagram.com/i_klishevich/" target="_blank">Instagram</a> <br />
-         7 января 2020 года в 14.00(по МСК)
+    <h5>
+        @Localizer["Mes6"] <a href="https://www.instagram.com/i_klishevich/" target="_blank">Instagram</a> <br />
+        @Localizer["Mes7"]
     </h5>
-    <p>`
+    <p>
+        `
         <address>
-            <strong>По воопросам сотрудничества:</strong> <a href="mailto:klishevich.ilya@gmail.com" target="_blank">Support@gmail.com</a><br />
-            <strong>По вопросам рекламы:</strong> <a href="mailto:gjtae@mail.ru" target="_blank">Marketing@mail.ru</a>
+            <strong>@Localizer["Mes8"]</strong> <a href="mailto:klishevich.ilya@gmail.com" target="_blank">Support@gmail.com</a><br />
+            <strong>@Localizer["Mes9"]</strong> <a href="mailto:gjtae@mail.ru" target="_blank">Marketing@mail.ru</a><br />
+            <strong>@Localizer["Mes10"] <vk></vk> </strong>
         </address>
     </p>
 </div>

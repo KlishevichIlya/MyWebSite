@@ -28,8 +28,18 @@ using MyProject.ViewsModels;
 
 #line default
 #line hidden
+#line 4 "C:\Users\Ilya\source\repos\MyProject\MyProject\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Mvc.Localization;
+
+#line default
+#line hidden
+#line 5 "C:\Users\Ilya\source\repos\MyProject\MyProject\Views\_ViewImports.cshtml"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e87269ce8ae7561aa0f524db29e6ec6597aa2a79", @"/Views/Account/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8346a9e56f217a4bd34523a3946ed5f2113b86d6", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4ef5f1ef31367949e2cea7bbc7b6fd608ca466df", @"/Views/_ViewImports.cshtml")]
     public class Views_Account_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "post", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -87,7 +97,7 @@ using MyProject.ViewsModels;
             WriteLiteral("    ");
             EndContext();
             BeginContext(84, 125, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "842b633bbf37459eaa2b9791d1c3fcae", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "865549f3b3c44c52804fd2b3c470a17d", async() => {
                 BeginContext(149, 53, true);
                 WriteLiteral("\r\n        <input type=\"submit\" value=\"Выход\" />\r\n    ");
                 EndContext();
@@ -125,7 +135,7 @@ else
             WriteLiteral("    ");
             EndContext();
             BeginContext(227, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "019c2766d74e4cfdb21eb340b2f5375d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e029b90e3dc8492f89a3a0f2fca6fc09", async() => {
                 BeginContext(274, 4, true);
                 WriteLiteral("Вход");
                 EndContext();
@@ -149,7 +159,7 @@ else
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(288, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "224f3db1178940aba5d762d4a5daa862", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f77a65dc231b4b3b950067086dab9310", async() => {
                 BeginContext(338, 11, true);
                 WriteLiteral("Регистрация");
                 EndContext();

@@ -1,0 +1,39 @@
+﻿@model MyProject.Models.Phone
+@{
+    ViewBag.Title = "Добавление смартфона";
+}
+<form asp-action="create" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="namePhone" class="control-label">Название статьи:</label>
+        <input type="text" asp-for="namePhone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="companyPhone" class="control-label">Компания, разработавшая данный девайс:</label>
+        <input type="text" asp-for="companyPhone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="shortDesc" class="control-label">Краткое описание статьи(превью):</label>
+        <input type="text" asp-for="shortDesc" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="fullDesc" class="control-label">Полный текст статьи:</label>
+        <input type="text" asp-for="fullDesc" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ramPhone" class="control-label">ОЗУ данного девайса:</label>
+        <input type="text" asp-for="ramPhone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="cpuPhone" class="control-label">Процессор данного девайса:</label>
+        <input type="text" asp-for="cpuPhone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="img" class="control-label">Картинка для статьи:</label>
+        <input type="text" asp-for="img" class="form-control" />
+    </div> 
+
+
+    <div class="form-group">
+        <input type="submit" value="Добавить статью" class="btn btn-default" asp-controller="Phones" asp-action="Create" />
+    </div>
+</form>

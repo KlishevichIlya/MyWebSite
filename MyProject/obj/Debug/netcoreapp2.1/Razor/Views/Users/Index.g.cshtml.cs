@@ -28,8 +28,18 @@ using MyProject.ViewsModels;
 
 #line default
 #line hidden
+#line 4 "C:\Users\Ilya\source\repos\MyProject\MyProject\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Mvc.Localization;
+
+#line default
+#line hidden
+#line 5 "C:\Users\Ilya\source\repos\MyProject\MyProject\Views\_ViewImports.cshtml"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b180a96f6cacdd7bbb2871d25b60b0cbcec1491e", @"/Views/Users/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8346a9e56f217a4bd34523a3946ed5f2113b86d6", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4ef5f1ef31367949e2cea7bbc7b6fd608ca466df", @"/Views/_ViewImports.cshtml")]
     public class Views_Users_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<MyProject.Models.User>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -72,7 +82,7 @@ using MyProject.ViewsModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(97, 48, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "686e6608c9aa4fdfbb1c44a998b0789b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "feac8a75ac0e450faa7127978f00bdc8", async() => {
                 BeginContext(120, 21, true);
                 WriteLiteral("Добавить пользователя");
                 EndContext();
@@ -123,12 +133,12 @@ using MyProject.ViewsModels;
             WriteLiteral("</td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(382, 463, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88fbd71887034910b70a8870ccdbe81a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f6b5e55de5cf4488a16c6d4ba5d4ce85", async() => {
                 BeginContext(446, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(468, 88, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c115d58afbe04d26b2d146a44fb681ff", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "688ed679d2e14cdabc46a37b373e85c1", async() => {
                     BeginContext(544, 8, true);
                     WriteLiteral("Изменить");
                     EndContext();
@@ -164,7 +174,7 @@ using MyProject.ViewsModels;
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(578, 104, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f0f174e4f16c4866b4958dc3fd22795b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bfe6863ef4984ef48727ed510913f25e", async() => {
                     BeginContext(664, 14, true);
                     WriteLiteral("Сменить пароль");
                     EndContext();

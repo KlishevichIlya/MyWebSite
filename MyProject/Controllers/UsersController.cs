@@ -18,8 +18,11 @@ namespace MyProject.Controllers
         }
         
         public IActionResult Index()
-        {           
-            return View(_userManager.Users.ToList());
+        {
+            if (User.IsInRole("admin"))
+                return View(_userManager.Users.ToList());
+            else
+                return NotFound();
         }
         
         public IActionResult Create() => View();
