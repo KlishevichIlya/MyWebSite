@@ -1,7 +1,10 @@
-﻿@{
-    ViewBag.Title = "Наши партнеры";
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewBag.Title = @Localizer["H1"];
 }
-<h1> Наши самые крупные партнеры и спонсоры: </h1>
+<h1> @Localizer["S1"] </h1>
 <head>
     <link rel="stylesheet" type="text/css" href="Partners.css">
 </head>
@@ -9,23 +12,23 @@
     @{
         <div class="col-lg-4">
             <img class="img-thumbnail" src="~/images/1xbet.jpg" />
-            <h2>Компания 1XBET</h2>
-            <p>Букмейкерская компания, которая является нашим главным спонсором. Благодаря этой компании, Вы можете пользоваться нашим блогом абсолютно бесплатно.</p>
-            <a href="https://1x-official.com/" target="_blank">Ознакомиться с партнером</a>
+            <h2>@Localizer["S2"]</h2>
+            <p>@Localizer["S3"]</p>
+            <a href="https://1x-official.com/" target="_blank">@Localizer["S4"]</a>
         </div>
 
         <div class="col-lg-4">
             <img class="img-thumbnail" src="~/images/Istore.png" />
-            <h2>Официальный партнёр компании Apple в Беларуси</h2>
-            <p>Поставляют нам девайсы для обзоров. Благодаря IStore, обзоры на новую технику выходят намного быстрее.</p>
-            <a href="https://i-store.by/" target="_blank">Ознакомиться с партнером</a>
+            <h2>@Localizer["M1"]</h2>
+            <p>@Localizer["M2"]</p>
+            <a href="https://i-store.by/" target="_blank">@Localizer["S4"]</a>
 
         </div>
         <div class="col-lg-4">
             <img class="img-thumbnail" src="~/images/samsung-logo.jpg" />
-            <h2>Официальный партнёр компании Samsung в Беларуси</h2>
-            <p>Поставляют нам девайсы для розыгрышей и обзоров. Благодаря Samsung, у нас есть возможность разыгрывать девайся для наших читателей.</p>
-            <a href="https://i-store.by/" target="_blank">Ознакомиться с партнером</a>
+            <h2>@Localizer["G1"]</h2>
+            <p>@Localizer["G2"]</p>
+            <a href="https://i-store.by/" target="_blank">@Localizer["S4"]</a>
 
         </div>
     }

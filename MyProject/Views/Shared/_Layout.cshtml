@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -10,38 +12,38 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="/Home/Index">Блог</a>
+            <a class="navbar-brand" href="/Home/Index">@Localizer["P1"]</a>
             <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarCollapse" aria-label="Toggle navigation" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Phones/Index">Статьи<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/Phones/Index">@Localizer["P2"]<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Partners">Наши партнеры</a>
+                        <a class="nav-link" href="/Partners">@Localizer["P3"]</a>
                     </li>
                     @if (!User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item active">
-                            <a class="nav-link " href="/Account/Register">Регистрация</a>
+                            <a class="nav-link " href="/Account/Register">@Localizer["P4"]</a>
                         </li>
                     }
                     @if (!User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item active">
-                            <a class="nav-link " href="/Account/Login">Войти</a>
+                            <a class="nav-link " href="/Account/Login">@Localizer["P5"]</a>
                         </li>
                     }
 
                     @if (User.IsInRole("admin"))
                     {
                         <li class="nav-item active">
-                            <a class="nav-link " href="/Users/Index">Пользователи</a>
+                            <a class="nav-link " href="/Users/Index">@Localizer["P6"]</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link " href="/Roles/Index">Роли</a>
+                            <a class="nav-link " href="/Roles/Index">@Localizer["P7"]</a>
                         </li>
                     }
 
@@ -49,7 +51,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item active">
-                            <a class="nav-link " asp-controller="Account" asp-action="Index">Выйти</a>
+                            <a class="nav-link " asp-controller="Account" asp-action="Index">@Localizer["P8"]</a>
                         </li>
                     }
 
@@ -57,7 +59,7 @@
 
                 </ul>
                 <form class="form-inline mt-2 mt-md-0">
-                    <font color="white">@await Component.InvokeAsync("Timer")</font> 
+                    <font color="white">@await Component.InvokeAsync("Timer")</font>
                 </form>
             </div>
             <p>

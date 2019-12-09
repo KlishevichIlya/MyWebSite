@@ -58,3 +58,12 @@ C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Index.de.resources
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Index.en.resources
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Index.ru.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Partners.de.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Partners.en.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Partners.ru.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Shared._Layout.de.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Shared._Layout.en.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Shared._Layout.ru.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Components.Timer.de.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Components.Timer.en.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Components.Timer.ru.resources
