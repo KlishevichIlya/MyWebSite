@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.Models;
 using MyProject.ViewsModels;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -24,7 +26,32 @@ namespace MyProject.Controllers
             else
                 return NotFound();
         }
-        
+
+        public JsonResult GetSearchingData(string SearchBy, string SearchValue)
+        {
+            List<User> UserList = new List<User>();
+            if(SearchBy == "Year")
+            {
+                try
+                {
+                    int Year = Convert.ToInt32(SearchValue);
+                    UserList = _userManager.Users.Where(x => x.Year == Year || SearchValue == null).ToList();
+                }
+                catch(FormatException)
+                {
+                    Console.WriteLine("{0} is not a Year", SearchValue);
+                }
+                return Json(UserList);
+            }
+            else
+            {
+                UserList = _userManager.Users.Where(x => x.Email.Contains(SearchValue) || SearchValue == null).ToList();
+                return Json(UserList);
+            }
+        }
+
+
+
         public IActionResult Create() => View();
 
         [HttpPost]

@@ -44,11 +44,10 @@ namespace MyProject
                 .AddEntityFrameworkStores<ApplicationContext>();
             services.AddTransient<IPhonesCategory, CategoryRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.ConfigureApplicationCookie(options =>
+           /* services.ConfigureApplicationCookie(options =>
             {
                 options.ExpireTimeSpan = TimeSpan.FromTicks(0);
-            });
-
+            });*/
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddMvc()
                 .AddDataAnnotationsLocalization()

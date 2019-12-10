@@ -15,7 +15,7 @@
         .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
         .ToList();
 }
-
+<br />
 <form asp-controller="Home" asp-action="SetLanguage" style="margin-top:50px;"
       asp-route-returnUrl="@Context.Request.Path"
       method="post" class="form-horizontal">
