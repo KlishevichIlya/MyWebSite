@@ -71,3 +71,13 @@ C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.ViewsModels.RegisterViewModel.ru.resources
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SelectLanguagePartial.g.cshtml.cs
 C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.csprojAssemblyReference.cache
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Privacy.de.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Privacy.en.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Home.Privacy.ru.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Roles.Index.de.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Roles.Index.en.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Roles.Index.ru.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Users.Index.de.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Users.Index.en.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Resources.Views.Users.Index.ru.resources
+C:\Users\Ilya\source\repos\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Home\Components\RulesList\Default.g.cshtml.cs

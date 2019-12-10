@@ -1,19 +1,21 @@
 ﻿@page
 @model IEnumerable<MyProject.Models.Comment>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 <div class="container">
     <div class="row">&nbsp;</div>
     <div class="row">
-        <div class="col-2">User</div>
+        <div class="col-2">@Localizer["User"]</div>
         <div class="col-4"><input type="text" id="userInput" /></div>
     </div>
     <div class="row">
-        <div class="col-2">Message</div>
+        <div class="col-2">@Localizer["Message"]</div>
         <div class="col-4"><input type="text" id="messageInput" /></div>
     </div>
     <div class="row">&nbsp;</div>
     <div class="row">
         <div class="col-6">
-            <input type="button" id="sendButton" value="Send Message" />
+            <input type="button" id="sendButton" value="@Localizer["Button"]" />
         </div>
     </div>
 </div>
@@ -27,13 +29,13 @@
         <ul id="messagesList"></ul>
     </div>
 </div>
-<h1>Наши отзывы:</h1>
+<h1>@Localizer["H1"]:</h1>
 <div class="row mt-5 mb-2">
     @{
         foreach (Comment comment in ViewBag.Comments)
         {
             <div class="col-lg-4">
-                <h3>@comment.UserName : @comment.Text</h3><br/>
+                <h3>@comment.UserName : @comment.Text</h3><br />
             </div>
 
         }

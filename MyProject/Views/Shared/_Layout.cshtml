@@ -26,7 +26,7 @@
                             <a class="nav-link" href="/Partners">@Localizer["P3"]</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="/Home/Privacy">Отзывы</a>
+                            <a class="nav-link" href="/Home/Privacy">@Localizer["P9"]</a>
                         </li>
                         @if (!User.Identity.IsAuthenticated)
                         {
@@ -51,7 +51,6 @@
                                 <a class="nav-link " href="/Roles/Index">@Localizer["P7"]</a>
                             </li>
                         }
-
 
 
                         @if (User.Identity.IsAuthenticated)

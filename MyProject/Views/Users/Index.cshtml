@@ -1,37 +1,39 @@
 ﻿@model IEnumerable<MyProject.Models.User>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
     ViewBag.Title = "Список пользователей";
 }
 
-<a asp-action="Create">Добавить пользователя</a>
+<a asp-action="Create">@Localizer["H1"]</a>
 <br /> <br />
-       <div class="container">
-           <b>Search By:</b>
-           <select id="SearchBy">
-               <option value="Email">Email</option>
-               <option value="Year">Year</option>
-           </select> <br /> <br />
-           @Html.TextBox("Search")<input type="submit" id="SearchBtn" value="Search" /> <br /> <br />
-           <table class="table table-bordered">
-               <thead>
-                   <tr>    
-                       
-                       <th>Email</th>
-                       <th>Year</th>
-                   </tr>
-               </thead>
-               <tbody id="DataSearching">
-                  @foreach( var Item in Model)
-                   {
-                   <tr>
-                      
-                       <th>@Item.Email</th>
-                       <th>@Item.Year</th>
-                   </tr>
-                   }
-               </tbody>
-           </table>
-       </div>
+<div class="container">
+    <b>@Localizer["Search"]</b>
+    <select id="SearchBy">
+        <option value="Email">Email</option>
+        <option value="Year">Year</option>
+    </select> <br /> <br />
+    @Html.TextBox("Search")<input type="submit" id="SearchBtn" value="@Localizer["Button"]" /> <br /> <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+
+                <th>Email</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody id="DataSearching">
+            @foreach (var Item in Model)
+            {
+                <tr>
+
+                    <th>@Item.Email</th>
+                    <th>@Item.Year</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
@@ -51,12 +53,12 @@
                     }
                     else {
                         $.each(result, function (index, value) {
-                            var Data = "<tr>" +                                
+                            var Data = "<tr>" +
                                 "<td>" + value.email + "</td>" +
-                                "<td>" + value.year + "</td> " +                               
+                                "<td>" + value.year + "</td> " +
                                 "</tr>";
                             SetData.append(Data);
-                        }); 
+                        });
                     }
                 }
             });

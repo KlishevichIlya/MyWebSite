@@ -122,7 +122,7 @@ using Microsoft.Extensions.Localization;
             WriteLiteral(" <a href=\"https://github.com/KlishevichIlya\" target=\"_blank\">GitHub</a></p></li>\r\n    </ul>\r\n    <p>\r\n        ");
             EndContext();
             BeginContext(493, 56, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5b38110ddd12416b8799218cc752b762", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8d160104ef4b4f418a92ad91a9f5f7d7", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -192,7 +192,7 @@ using Microsoft.Extensions.Localization;
             WriteLiteral(" ");
             EndContext();
             BeginContext(1064, 9, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vk", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "925fed9eec7b4a4f8b967cf5f57ab309", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vk", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c1738a0bdb84a629b393fe798cf0733", async() => {
             }
             );
             __MyProject_TagHelpers_VKTagHelper = CreateTagHelper<global::MyProject.TagHelpers.VKTagHelper>();

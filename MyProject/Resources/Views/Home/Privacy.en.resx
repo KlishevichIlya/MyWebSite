@@ -117,31 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="P1" xml:space="preserve">
-    <value>Blog</value>
+  <data name="Button" xml:space="preserve">
+    <value>Send</value>
   </data>
-  <data name="P2" xml:space="preserve">
-    <value>Articles</value>
+  <data name="H1" xml:space="preserve">
+    <value>Our Feedback</value>
   </data>
-  <data name="P3" xml:space="preserve">
-    <value>Our partner</value>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
   </data>
-  <data name="P4" xml:space="preserve">
-    <value>Registration</value>
-  </data>
-  <data name="P5" xml:space="preserve">
-    <value>Enter</value>
-  </data>
-  <data name="P6" xml:space="preserve">
-    <value>Users</value>
-  </data>
-  <data name="P7" xml:space="preserve">
-    <value>Roles</value>
-  </data>
-  <data name="P8" xml:space="preserve">
-    <value>Go out</value>
-  </data>
-  <data name="P9" xml:space="preserve">
-    <value>Reviews</value>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
   </data>
 </root>

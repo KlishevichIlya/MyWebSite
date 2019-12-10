@@ -14,6 +14,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using MyProject.Hubs;
+using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace MyProject
 {
@@ -100,16 +101,44 @@ namespace MyProject
             
 
             app.UseMvc(routes =>
-              {
-
-              
+              {             
                   routes.MapRoute(
                       name: "default",
                       template: "{controller=Home}/{action=Index}/{id?}");
                   routes.MapRoute(
                      name: "default2",
-                     template: "{controller=Phones}/{action=Information}/{id?}");
-                  
+                     template: "{controller}/{action}/{id?}",
+                     constraints: new { id = new IntRouteConstraint() },
+                     defaults: new { controller = "Phones", action = "Information" }
+                     );
+                  routes.MapRoute(
+                         name: "ForContact",
+                         template: "{controller=Home}/{action=Contact}/{id?}");
+                  routes.MapRoute(
+                       name: "ForIndex",
+                       template: "{controller=Phones}/{action=Index}/{id?}");
+                  routes.MapRoute(
+                      name: "ForUsersIndex",
+                      template: "{controller=Users}/{action=Index}/{id?}");
+                  routes.MapRoute(
+                      name: "ForUsersEdit",
+                      template: "{controller=Users}/{action=Edit}/{id?}");
+                  routes.MapRoute(
+                      name: "ForHomePrivacy",
+                      template: "{controller=Home}/{action=Privacy}/{id?}");
+                  routes.MapRoute(
+                      name: "ForRolesIndex",
+                      template: "{controller=Roles}/{action=Index}/{id?}");
+                  routes.MapRoute(
+                      name: "ForRolesCreate",
+                      template: "{controller=Roles}/{action=Create}/{id?}");
+                  routes.MapRoute(
+                      name: "ForRolesUserList",
+                      template: "{controller=Roles}/{action=UserList}/{id?}");
+                  routes.MapRoute(
+                     name: "ForUsersCreate",
+                     template: "{controller=Users}/{action=Create}/{id?}");
+
               });
            
             using (var scope = app.ApplicationServices.CreateScope())

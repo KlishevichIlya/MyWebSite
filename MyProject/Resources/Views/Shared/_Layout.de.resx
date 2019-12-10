@@ -141,4 +141,7 @@
   <data name="P8" xml:space="preserve">
     <value>Herauskommen</value>
   </data>
+  <data name="P9" xml:space="preserve">
+    <value>Bewertungen</value>
+  </data>
 </root>
